@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 36 33% 96%;
+    --secondary-foreground: 0 0% 11%;
+    --muted: 36 20% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 43 61% 52%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 36 20% 88%;
+    --input: 36 20% 88%;
+    --ring: 43 61% 52%;
+    --radius: 0.25rem;
+
+    --gold: #D4AF37;
+    --ivory: #F8F5F0;
+    --charcoal: #1A1A1A;
+    --brand-text: #2D2D2D;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-charcoal;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-8 py-3.5 bg-gold text-charcoal font-inter font-semibold text-sm tracking-widest uppercase transition-all duration-300;
+    letter-spacing: 0.1em;
+  }
+
+  .btn-gold:hover {
+    @apply bg-gold-light;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+  }
+
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center px-8 py-3.5 border border-gold text-gold font-inter font-semibold text-sm tracking-widest uppercase transition-all duration-300;
+    letter-spacing: 0.1em;
+  }
+
+  .btn-outline-gold:hover {
+    @apply bg-gold text-charcoal;
+    transform: translateY(-1px);
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center px-8 py-3.5 bg-charcoal text-white font-inter font-semibold text-sm tracking-widest uppercase transition-all duration-300;
+    letter-spacing: 0.1em;
+  }
+
+  .btn-dark:hover {
+    @apply bg-charcoal-mid;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center px-8 py-3.5 border border-white text-white font-inter font-semibold text-sm tracking-widest uppercase transition-all duration-300;
+    letter-spacing: 0.1em;
+  }
+
+  .btn-outline-white:hover {
+    @apply bg-white text-charcoal;
+    transform: translateY(-1px);
+  }
+
+  .section-label {
+    @apply text-gold font-inter text-xs font-semibold tracking-widest uppercase mb-4;
+    letter-spacing: 0.2em;
+  }
+
+  .section-title {
+    @apply font-playfair text-charcoal;
+    line-height: 1.2;
+  }
+
+  .gold-divider {
+    @apply w-12 h-px bg-gold mx-auto my-6;
+  }
+
+  .gold-divider-left {
+    @apply w-12 h-px bg-gold my-6;
+  }
+
+  .luxury-card {
+    @apply bg-white border border-ivory-dark transition-all duration-500;
+  }
+
+  .luxury-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+  }
+
+  .image-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+  .animate-delay-600 { animation-delay: 600ms; }
+  .animate-delay-700 { animation-delay: 700ms; }
+
+  .opacity-0-initial {
+    opacity: 0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F5F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8941E;
+}
+
+/* Intersection Observer animation classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
