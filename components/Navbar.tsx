@@ -59,7 +59,7 @@ export default function Navbar() {
       </div>
       <div className="flex flex-col leading-none">
         <span className="font-playfair text-gold text-base sm:text-lg font-bold tracking-wide">
-          Prestige Noble Lady
+          A.S Prestige Noble Lady
         </span>
         <span className="font-inter text-white/80 text-[9px] sm:text-[10px] tracking-[0.3em] uppercase">
           Luxury Linens
