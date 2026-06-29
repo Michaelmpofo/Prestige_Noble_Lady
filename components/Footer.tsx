@@ -4,9 +4,10 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Youtube } fro
 const products = [
   { label: 'Bedsheets', href: '/products?category=Bedsheets' },
   { label: 'Duvet Sets', href: '/products?category=Duvet+Sets' },
-  { label: 'Pillowcases', href: '/products?category=Pillowcases' },
   { label: 'Curtains', href: '/products?category=Curtains' },
-  { label: 'Mattress Covers', href: '/products?category=Mattress+Covers' },
+  { label: 'Water Mattress Covers', href: '/products?category=Water+Mattress+Covers' },
+  { label: 'Sofa Covers', href: '/products?category=Sofa+Covers' },
+  { label: 'Funnel Blankets', href: '/products?category=Funnel+Blankets' },
 ];
 
 const company = [
@@ -20,6 +21,7 @@ const company = [
 const support = [
   { label: 'Contact Us', href: '/contact' },
   { label: 'Request a Quote', href: '/contact#quote' },
+  { label: 'Order & Payment', href: '/contact#order' },
   { label: 'WhatsApp Order', href: 'https://wa.me/233549678391' },
   { label: 'Size Guide', href: '#' },
   { label: 'Care Instructions', href: '#' },
@@ -123,14 +125,22 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:Kinashabdullai@gmail.com"
-                  className="flex items-start gap-3 group"
+                  href="mailto:Prestigenobleladyluxury@gmail.com"
+                  className="group flex items-start gap-3"
                 >
                   <Mail size={14} className="text-gold mt-0.5 flex-shrink-0" />
                   <span className="font-inter text-sm text-white/60 group-hover:text-gold transition-colors break-all">
-                    Kinashabdullai@gmail.com
+                    Prestigenobleladyluxury@gmail.com
                   </span>
                 </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-10 h-10 border border-gold/40 flex items-center justify-center flex-shrink-0">
+                  <span className="text-gold text-base font-semibold">@</span>
+                </div>
+                <span className="font-inter text-sm text-white/60">
+                  @prestigenoblelady.luxury
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={14} className="text-gold mt-0.5 flex-shrink-0" />

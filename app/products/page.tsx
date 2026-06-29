@@ -141,7 +141,7 @@ export default function ProductsPage() {
         label="Our Collections"
         title="Premium Home"
         titleAccent="Linen Collections"
-        subtitle="Browse our full range of luxury bedsheets, duvet sets, curtains, pillowcases and mattress covers."
+        subtitle="Browse our full range of luxury bedsheets, duvet sets, curtains, water mattress covers, sofa covers and funnel blankets."
         bgImage="https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=1920"
       />
       <Suspense fallback={

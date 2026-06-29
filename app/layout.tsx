@@ -20,8 +20,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Prestige Noble Lady Luxury | Where Luxury Meets Comfort',
   description:
-    'Premium bedsheets, duvet sets, pillowcases, curtains and mattress covers crafted for luxury living. Trusted by hotels, guest houses, and homeowners across Ghana.',
-  keywords: 'luxury bedsheets, premium duvet sets, curtains, pillowcases, mattress covers, hotel linen, Ghana',
+    'Premium bedsheets, duvet sets, curtains, water mattress covers, sofa covers and funnel blankets crafted for luxury living. Trusted by hotels, guest houses, and homeowners across Ghana.',
+  keywords: 'luxury bedsheets, premium duvet sets, curtains, water mattress covers, sofa covers, funnel blankets, hotel linen, Ghana',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -61,7 +61,7 @@ export default function HeroSection() {
             mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          Premium bedsheets, duvet sets, curtains, pillowcases and mattress covers
+          Premium bedsheets, duvet sets, curtains, water mattress covers, sofa covers and funnel blankets
           crafted for luxury living — trusted by homeowners and top hotels across Ghana.
         </p>
 

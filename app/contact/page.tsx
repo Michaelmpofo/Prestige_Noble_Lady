@@ -123,15 +123,24 @@ export default function ContactPage() {
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:Kinashabdullai@gmail.com" className="group flex items-start gap-4">
+                    <a href="mailto:Prestigenobleladyluxury@gmail.com" className="group flex items-start gap-4">
                       <div className="w-10 h-10 border border-gold/40 flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors duration-300">
                         <Mail size={16} className="text-gold group-hover:text-charcoal transition-colors duration-300" />
                       </div>
                       <div>
                         <p className="font-inter text-[10px] font-semibold tracking-widest uppercase text-charcoal-mid/50 mb-0.5">Email</p>
-                        <p className="font-inter text-charcoal text-sm font-medium break-all">Kinashabdullai@gmail.com</p>
+                        <p className="font-inter text-charcoal text-sm font-medium break-all">Prestigenobleladyluxury@gmail.com</p>
                       </div>
                     </a>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="w-10 h-10 border border-gold/40 flex items-center justify-center flex-shrink-0">
+                      <span className="text-gold text-base font-semibold">@</span>
+                    </div>
+                    <div>
+                      <p className="font-inter text-[10px] font-semibold tracking-widest uppercase text-charcoal-mid/50 mb-0.5">TikTok</p>
+                      <p className="font-inter text-charcoal text-sm font-medium">@prestigenoblelady.luxury</p>
+                    </div>
                   </li>
                   <li className="flex items-start gap-4">
                     <div className="w-10 h-10 border border-gold/40 flex items-center justify-center flex-shrink-0">
@@ -169,6 +178,29 @@ export default function ContactPage() {
                     </svg>
                     Open WhatsApp Chat
                   </a>
+                </div>
+
+                <div id="order" className="mt-8 p-6 bg-ivory border border-gold/20">
+                  <p className="font-inter text-[10px] font-semibold tracking-[0.25em] uppercase text-gold mb-3">
+                    Order & Payment Instructions
+                  </p>
+                  <p className="font-inter text-charcoal-mid/80 text-sm mb-4">
+                    Place your order through the form or WhatsApp. Use one of the payment options below and send proof of payment so we can confirm your order quickly.
+                  </p>
+                  <div className="grid gap-4 text-sm text-charcoal">
+                    <div>
+                      <p className="font-inter text-[11px] uppercase tracking-[0.2em] text-charcoal-mid/60 mb-1">Mobile Money</p>
+                      <p className="font-inter text-charcoal font-medium">0549678391 / 0597440453</p>
+                      <p className="font-inter text-charcoal-mid/70 text-xs mt-1">Noble Ladies / Sakinatu Abdullai</p>
+                    </div>
+                    <div>
+                      <p className="font-inter text-[11px] uppercase tracking-[0.2em] text-charcoal-mid/60 mb-1">Bank Payments</p>
+                      <p className="font-inter text-charcoal font-medium">Ecobank – 1441002611962</p>
+                      <p className="font-inter text-charcoal-mid/70 text-xs">Account Name: Sakinatu Abdullai</p>
+                      <p className="font-inter text-charcoal font-medium mt-3">GCB – 1341420000361</p>
+                      <p className="font-inter text-charcoal-mid/70 text-xs">Account Name: A. S PRESTIGE NOBLE LADY</p>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Map Placeholder */}

@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Star, MessageCircle } from 'lucide-react';
 import type { Product } from '@/lib/data/products';
 
@@ -26,13 +26,21 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 export default function ProductCard({ product, priority }: Props) {
+  const router = useRouter();
   const whatsappMessage = `Hello! I'm interested in the ${product.name}. Could you please provide more details?`;
-  const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappHref = `https://wa.me/233549678391?text=${encodeURIComponent(whatsappMessage)}`;
+
+  const handleNavigateToDetail = () => {
+    router.push(`/products/${product.id}`);
+  };
 
   return (
     <article className="group bg-white border border-ivory-dark flex flex-col overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
-      {/* Image Container */}
-      <div className="relative overflow-hidden aspect-[4/3] bg-ivory">
+      {/* Image Container - Clickable Div */}
+      <div
+        onClick={handleNavigateToDetail}
+        className="relative overflow-hidden aspect-[4/3] bg-ivory cursor-pointer block"
+      >
         <img
           src={product.image}
           alt={product.name}
@@ -62,8 +70,11 @@ export default function ProductCard({ product, priority }: Props) {
         </div>
       </div>
 
-      {/* Content */}
-      <div className="flex flex-col flex-1 p-5">
+      {/* Content - Clickable Div */}
+      <div
+        onClick={handleNavigateToDetail}
+        className="flex flex-col flex-1 p-5 cursor-pointer"
+      >
         {/* Category */}
         <span className="text-gold font-inter text-[10px] font-semibold tracking-widest uppercase mb-2">
           {product.category}
@@ -75,9 +86,15 @@ export default function ProductCard({ product, priority }: Props) {
         </h3>
 
         {/* Description */}
-        <p className="font-inter text-charcoal-mid/70 text-xs leading-relaxed mb-4 line-clamp-2 flex-1">
+        <p className="font-inter text-charcoal-mid/70 text-xs leading-relaxed mb-3 line-clamp-2 flex-1">
           {product.description}
         </p>
+
+        {product.sizes?.length ? (
+          <p className="font-inter text-charcoal-mid/70 text-[11px] mb-4 line-clamp-2">
+            {product.sizes.join(' • ')}
+          </p>
+        ) : null}
 
         {/* Rating */}
         <div className="flex items-center gap-2 mb-4">
@@ -86,29 +103,34 @@ export default function ProductCard({ product, priority }: Props) {
             ({product.reviewCount})
           </span>
         </div>
+      </div>
 
-        {/* Price & CTA */}
-        <div className="flex items-center justify-between border-t border-ivory-dark pt-4">
-          <div>
-            {product.price ? (
+      {/* Price & CTA */}
+      <div className="flex items-center justify-between border-t border-ivory-dark pt-4 px-5 pb-5">
+        <div>
+          {product.price ? (
+            <div className="flex flex-col gap-1">
               <span className="font-playfair text-charcoal text-xl font-medium">
                 GH₵ {product.price.toLocaleString()}
               </span>
-            ) : (
-              <span className="font-inter text-gold text-xs font-semibold tracking-wider uppercase">
-                {product.priceLabel || 'Contact for Price'}
-              </span>
-            )}
-          </div>
-          <a
-            href={whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold text-[10px] px-4 py-2.5"
-          >
-            Order Now
-          </a>
+              {product.wholesalePrice && (
+                <span className="font-inter text-gold text-xs font-semibold">
+                  Wholesale: GH₵ {product.wholesalePrice} (5+)
+                </span>
+              )}
+            </div>
+          ) : (
+            <span className="font-inter text-gold text-xs font-semibold tracking-wider uppercase">
+              {product.priceLabel || 'Contact for Price'}
+            </span>
+          )}
         </div>
+        <button
+          onClick={handleNavigateToDetail}
+          className="btn-gold text-[10px] px-4 py-2.5"
+        >
+          View
+        </button>
       </div>
     </article>
   );

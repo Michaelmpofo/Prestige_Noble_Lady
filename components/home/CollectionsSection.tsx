@@ -5,33 +5,39 @@ import ScrollReveal from '@/components/ScrollReveal';
 const collections = [
   {
     name: 'Bedsheets',
-    desc: 'Hotel-quality cotton bedsheets for the perfect night\'s rest',
+    desc: 'Hotel-quality cotton bedsheets with matching pillowcases for a complete luxury bundle.',
     image: 'https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=600',
     href: '/products?category=Bedsheets',
   },
   {
     name: 'Duvet Sets',
-    desc: 'Premium duvet covers crafted for warmth and elegance',
+    desc: 'Premium duvet sets with coordinated pillowcases for every size.',
     image: 'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=600',
     href: '/products?category=Duvet+Sets',
   },
   {
     name: 'Curtains',
-    desc: 'Flowing drapes that transform any room into a sanctuary',
+    desc: 'Flowing drapes and curated curtain bundles for elegant windows.',
     image: 'https://images.pexels.com/photos/1571461/pexels-photo-1571461.jpeg?auto=compress&cs=tinysrgb&w=600',
     href: '/products?category=Curtains',
   },
   {
-    name: 'Pillowcases',
-    desc: 'Silk-touch pillowcases for effortless daily luxury',
-    image: 'https://images.pexels.com/photos/6186745/pexels-photo-6186745.jpeg?auto=compress&cs=tinysrgb&w=600',
-    href: '/products?category=Pillowcases',
+    name: 'Water Mattress Covers',
+    desc: 'Waterproof mattress covers that protect and elevate your bed.',
+    image: 'https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&w=600',
+    href: '/products?category=Water+Mattress+Covers',
   },
   {
-    name: 'Mattress Covers',
-    desc: 'Waterproof protection with the comfort you deserve',
-    image: 'https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&w=600',
-    href: '/products?category=Mattress+Covers',
+    name: 'Sofa Covers',
+    desc: 'Luxury sofa covers tailored for style, comfort, and easy care.',
+    image: 'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=600',
+    href: '/products?category=Sofa+Covers',
+  },
+  {
+    name: 'Funnel Blankets',
+    desc: 'Warm, premium funnel blankets with perfect finishing touches.',
+    image: 'https://images.pexels.com/photos/269327/pexels-photo-269327.jpeg?auto=compress&cs=tinysrgb&w=600',
+    href: '/products?category=Funnel+Blankets',
   },
 ];
 
@@ -54,7 +60,7 @@ export default function CollectionsSection() {
         </ScrollReveal>
 
         {/* Collections Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6">
           {collections.map((col, i) => (
             <ScrollReveal key={col.name} delay={i * 80} direction="up">
               <Link href={col.href} className="group block overflow-hidden relative aspect-[3/4] bg-charcoal">
